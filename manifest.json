@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "YouTube Video Replacer",
+    "version": "1.0",
+    "description": "Replace YouTube video with yewtu.be embed.",
+    "permissions": ["activeTab"],
+    "icons": {
+      "48": "icon.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://www.youtube.com/watch?v=*"],
+        "js": ["content.js"]
+      }
+    ],
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+      }
+    },
+    "web_accessible_resources": [
+      "icon.png"
+    ]
+  }
+  
